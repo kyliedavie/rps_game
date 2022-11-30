@@ -9,14 +9,23 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Rock, Paper, Scissors</h1>
+    <h1>
+    <div class="container">
+      <p class="title">
+        <span class="title-word title-word-1">Rock &#8226; </span>
+        <span class="title-word title-word-2">Paper &#8226; </span>
+        <span class="title-word title-word-3">Scissors &#8226; </span>
+        <span class="title-word title-word-4">Shoot !</span>
+      </p>
+    </div>
+    </h1>
     <main class="choice">
       <section class="pchoice">
         <h2>You choose . . .</h2>
         <div class="images">
-          <img id="r-img" src="svg/rock.svg" alt="hand as rock">
-          <img id="p-img" src="svg/paper.svg" alt="hand as paper">
-          <img id="s-img" src="svg/scissors.svg" alt="hand as scissors">
+          <img id="r-img" src="svg/rock.svg" alt="hand as rock" onclick="game('rock')">
+          <img id="p-img" src="svg/paper.svg" alt="hand as paper" onclick="game('paper')">
+          <img id="s-img" src="svg/scissors.svg" alt="hand as scissors" onclick="game('scissors')">
         </div>
       </section>
       <section class="ochoice">
@@ -25,7 +34,7 @@
       </section>
     </main>
     <section class="scoreboard">
-      <h2 id="result">It's a Tie.</h2>
+      <h2 id="result"></h2>
       <div id="play" class="score">
         <p id="pscore">0</p>
         <p class="label">Player</p>

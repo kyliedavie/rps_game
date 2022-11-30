@@ -1,16 +1,64 @@
 body {
   width: 65%;
   margin: auto;
-  background-color: #EDEDED;
+  background-color: #f4f1de;
+}
+h2 {
+  color: #264653;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1, h2 {
   text-align: center;
+}
+.title-word {
+    animation: color-animation 4s linear infinite;
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+}  
+.title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #2a9d8f;
+} 
+.title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+}
+.title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+}
+@keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+} 
+.container {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    padding: 0;
 }
 section {
   border: 2px solid #333;
   margin: 1rem 0;
   padding: 1rem;
   background-color: #FFF;
+  text-align: center;
+  border-style: double;
+  border-width: 3px;
+  border-radius: 15px;
 }
 main {
   display: grid;
@@ -38,7 +86,7 @@ main section {
   opacity: 100%;
 }
 section.scoreboard {
-  border-style: dashed;
+  border-style: double;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
@@ -48,7 +96,7 @@ section.scoreboard {
   main img {transform: scale(.9);}
 }
 #result {
-  border-bottom: 2px dotted #AAA;
+  border-bottom: 2px dotted rgb(71, 69, 69);
   padding-bottom: 1rem;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -64,6 +112,11 @@ section.scoreboard {
   font-weight: 800;
   line-height: 1;
   margin-bottom: .25rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #264653;
+}
+#play, #opp {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 p.label {
   line-height: 1;
